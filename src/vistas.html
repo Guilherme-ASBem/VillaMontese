@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Villa Guaimbe 1.0 - TSGui-VillaGuaimbe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/buttons.css">
+<style>
+  *{
+    padding: 0;
+    margin: 0%;
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+  }
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background:  rgb(255, 255, 255);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color:  rgba(125, 125, 126, 0.1);
+    border-radius: 20px;
+    border: 0px solid rgba(0, 0, 0, 1);
+  }
+  /**/
+  body{
+    display: flex;
+    align-items: start;
+    justify-content: baseline;
+    transition: 0.5s;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .container{
+    justify-content: baseline;
+    display: flex;
+    height: 2560px;
+    width: 1080px;
+  }
+  .content{
+    align-content: center;
+    overflow: hidden; /*Esconde todo o conteudo que ultrapassa o content*/
+    position: absolute; /* Centraliza o content */
+  }
+  .button{
+    position: relative;
+    width: 85px!important;
+    height: 85px!important;
+    border-radius: 10px;
+    background: #fff!important;
+    text-align: center;
+    margin-bottom: 10px;
+    box-shadow: 5px 10px 8px #1a1a1a;
+  }
+  .btn-hover {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .button-menu-left{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 200px;
+    height: 850px;
+    left: 20px;
+    top: 0;
+  }
+  .button-menu-right{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 200px;
+    height: 850px;
+    right: 20px;
+    top: 0;
+  }
+  .box{
+    background: url(images/Vista01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 2500px;
+    height: 1080px;
+  }
+  .img1{
+    background:url(plantas/Vista01.jpg);
+    background-size:auto;
+    transition: 0.5s;
+  }
+  .img2{
+    background:url(plantas/Vista02.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img3{
+    background:url(plantas/Vista03.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img4{
+    background:url(plantas/Vista04.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img5{
+    background:url(plantas/Vista05.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img6{
+    background:url(plantas/Vista06.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img7{
+    background:url(plantas/Vista07.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img8{
+    background:url(plantas/Vista08.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img9{
+    background:url(plantas/Vista09.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img10{
+    background:url(plantas/Vista010.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img11{
+    background:url(plantas/Vista011.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img12{
+    background:url(plantas/Vista012.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img13{
+    background:url(plantas/Vista013.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img14{
+    background:url(plantas/Vista014.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img15{
+    background:url(plantas/Vista015.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img16{
+    background:url(plantas/Vista016.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img17{
+    background:url(plantas/Vista017.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img18{
+    background:url(plantas/Vista018.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img21{
+    background:url(plantas/Fundo01.jpg);
+    background-size:auto;
+    transition: 0.5s;
+  }
+  .img22{
+    background:url(plantas/Fundo02.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img23{
+    background:url(plantas/Fundo03.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img24{
+    background:url(plantas/Fundo04.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img25{
+    background:url(plantas/Fundo05.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img26{
+    background:url(plantas/Fundo06.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img27{
+    background:url(plantas/Fundo07.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img28{
+    background:url(plantas/Fundo08.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img29{
+    background:url(plantas/Fundo09.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img30{
+    background:url(plantas/Fundo010.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img31{
+    background:url(plantas/Fundo011.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img32{
+    background:url(plantas/Fundo012.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img33{
+    background:url(plantas/Fundo013.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img34{
+    background:url(plantas/Fundo014.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img35{
+    background:url(plantas/Fundo015.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img36{
+    background:url(plantas/Fundo016.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img37{
+    background:url(plantas/Fundo017.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .img38{
+    background:url(plantas/Fundo018.jpg);
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .left{
+    position: fixed;
+    width: 60px;
+    height: 850px;
+  }
+  .right{
+    position: fixed;
+    width: 60px;
+    height: 850px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="content box" id="box"></div>
+
+      <div class="content button-menu-left" style="top: 18%;">
+        <h4 style="color: #fff;">Andares<p>Vista Shopping</p></h4>
+
+        <div class="content left" style="top:25%;left:60px;">
+          <button class="btn-hover color-5 img18" onclick="myFunction18()">15º</button>
+          <button class="btn-hover color-5 img16" onclick="myFunction16()">13º</button>
+          <button class="btn-hover color-5 img14" onclick="myFunction14()">11º</button>
+          <button class="btn-hover color-5 img12" onclick="myFunction12()">9º</button>
+          <button class="btn-hover color-5 img10" onclick="myFunction10()">7º</button>
+          <button class="btn-hover color-5 img8"  onclick="myFunction8()">5º</button>
+          <button class="btn-hover color-5 img6"  onclick="myFunction6()">3º</button>
+          <button class="btn-hover color-5 img4"  onclick="myFunction4()">1º</button>
+        </div>
+
+        <div class="content left" style="top:27%;left:115px;">
+          <button class="btn-hover color-5 img17" onclick="myFunction17()">14º</button>
+          <button class="btn-hover color-5 img15" onclick="myFunction15()">12º</button>
+          <button class="btn-hover color-5 img13" onclick="myFunction13()">10º</button>
+          <button class="btn-hover color-5 img11" onclick="myFunction11()">8º</button>
+          <button class="btn-hover color-5 img9"  onclick="myFunction9()">6º</button>
+          <button class="btn-hover color-5 img7"  onclick="myFunction7()">4º</button>
+          <button class="btn-hover color-5 img5"  onclick="myFunction5()">2º</button>
+        </div>
+      </div>
+    
+    <div class="content button-menu-right" style="top: 18%;">
+      <h4 style="color: #fff;">Andares<p>Vista Mata</p></h4>
+
+      <div class="content right" style="top:25%;right:60px;">
+        <button class="btn-hover color-5 img38" onclick="myFunction38()">15º</button>
+        <button class="btn-hover color-5 img36" onclick="myFunction36()">13º</button>
+        <button class="btn-hover color-5 img34" onclick="myFunction34()">11º</button>
+        <button class="btn-hover color-5 img32" onclick="myFunction32()">9º</button>
+        <button class="btn-hover color-5 img30" onclick="myFunction30()">7º</button>
+        <button class="btn-hover color-5 img28" onclick="myFunction28()">5º</button>
+        <button class="btn-hover color-5 img26" onclick="myFunction29()">3º</button>
+        <button class="btn-hover color-5 img24" onclick="myFunction24()">1º</button>  
+      </div>
+
+      <div class="content right" style="top:27%;right:115px;">
+        <button class="btn-hover color-5 img37" onclick="myFunction37()">14º</button>
+        <button class="btn-hover color-5 img35" onclick="myFunction35()">12º</button>
+        <button class="btn-hover color-5 img33" onclick="myFunction33()">10º</button>
+        <button class="btn-hover color-5 img31" onclick="myFunction31()">8º</button>
+        <button class="btn-hover color-5 img29" onclick="myFunction29()">6º</button>
+        <button class="btn-hover color-5 img27" onclick="myFunction27()">4º</button>
+        <button class="btn-hover color-5 img25" onclick="myFunction28()">2º</button>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="apresentacao.html" class="nav-link">
+        <img src="icons/Icone Apresentacao.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Apresentação</span>
+      </a>
+      <a href="localizacao.html" class="nav-link">
+        <img src="icons/Icone Localizacao.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Localização</span>
+      </a>
+      <a href="implantacao.html" class="nav-link">
+        <img src="icons/Icone Area de Implantacao.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Implantação</span>
+      </a>
+      <a href="plantas.html" class="nav-link">
+        <img src="icons/Icone Plantas.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Plantas</span>
+      </a>
+      <a href="tuor.html" class="nav-link">
+        <img src="icons/Icone 360.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Tuor</span>
+      </a>
+      <a href="andares.html" class="nav-link link-active">
+        <img src="icons/Icone Andares.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Vistas</span>
+      </a>
+      <a href="diferenciais.html" class="nav-link">
+        <img src="icons/Icone Diferencial.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Diferenciais</span>
+      </a>
+      <a href="evolucao.html" class="nav-link">
+        <img src="icons/Icone Evolucao da Obra.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Evolução</span>
+      </a>
+      <a href="index.html" class="nav-link" >
+        <img src="icons/back.png" alt="Home" class="nav-icon"style="width: 35px!important;">
+        <span class="nav-text">Voltar</span>
+      </a>
+    </nav>
+
+
+<script>
+    const cls = ['img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14', 'img15', 'img16', 'img17', 'img18',
+                 'img21', 'img22', 'img23', 'img24', 'img25', 'img26', 'img27', 'img28', 'img29', 'img30', 'img31', 'img32', 'img33', 'img34', 'img35', 'img36', 'img37', 'img38'];
+    function myFunction1() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img1");}
+    function myFunction2() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img2");}
+    function myFunction3() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img3");}
+    function myFunction4() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img4");}
+    function myFunction5() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img5");}
+    function myFunction6() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img6");}
+    function myFunction7() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img7");}
+    function myFunction8() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img8");}
+    function myFunction9() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img9");}
+    function myFunction10() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img10");}
+    function myFunction11() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img11");}
+    function myFunction12() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img12");}
+    function myFunction13() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img13");}
+    function myFunction14() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img14");}
+    function myFunction15() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img15");}
+    function myFunction16() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img16");}
+    function myFunction17() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img17");}
+    function myFunction18() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img18");}
+
+    function myFunction21() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img21");}
+    function myFunction22() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img22");}
+    function myFunction23() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img23");}
+    function myFunction24() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img24");}
+    function myFunction25() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img25");}
+    function myFunction26() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img26");}
+    function myFunction27() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img27");}
+    function myFunction28() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img28");}
+    function myFunction29() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img29");}
+    function myFunction30() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img30");}
+    function myFunction31() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img31");}
+    function myFunction32() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img32");}
+    function myFunction33() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img33");}
+    function myFunction34() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img34");}
+    function myFunction35() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img35");}
+    function myFunction36() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img36");}
+    function myFunction37() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img37");}
+    function myFunction38() {var element = document.getElementById("box");element.classList.remove(...cls);element.classList.add("img38");}
+
+
+
+/*
+  document.querySelector('.img1').addEventListener('click',(e)=>{
+    document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
+    document.body.classList.toggle('img1');
+  })
+  document.querySelector('.img2').addEventListener('click',(e)=>{
+    document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
+    document.body.classList.toggle('img2');
+  })
+  document.querySelector('.img3').addEventListener('click',(e)=>{
+    document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
+    document.body.classList.toggle('img3');
+  })
+  document.querySelector('.img4').addEventListener('click',(e)=>{
+    document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
+    document.body.classList.toggle('img4');
+  })
+  document.querySelector('.img5').addEventListener('click',(e)=>{
+    document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
+    document.body.classList.toggle('img5');
+  })
+  document.querySelector('.img6').addEventListener('click',(e)=>{
+    document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
+    document.body.classList.toggle('img6');
+  })
+  document.querySelector('.img7').addEventListener('click',(e)=>{
+    document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
+    document.body.classList.toggle('img7');
+  })
+  document.querySelector('.img8').addEventListener('click',(e)=>{
+    document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
+    document.body.classList.toggle('img8');
+  })
+  document.querySelector('.img9').addEventListener('click',(e)=>{
+    document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
+    document.body.classList.toggle('img9');
+  })
+  document.querySelector('.img10').addEventListener('click',(e)=>{
+    document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
+    document.body.classList.toggle('img10');
+  })
+  document.querySelector('.img11').addEventListener('click',(e)=>{
+    document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
+    document.body.classList.toggle('img11');
+  })
+  document.querySelector('.img12').addEventListener('click',(e)=>{
+    document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
+    document.body.classList.toggle('img12');
+  })
+  */
+</script>
+</body>
+</html>
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<title>Villa Guaimbe 1.0</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/lightbox.css">
+<link rel="stylesheet" href="styles/style-slides.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<script defer src="js/script.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="gallery">
+            <div class="image"><span><img src="images/18-FACHADA.jpg" alt=""></span></div>
+            <div class="image"><span><img src="images/fachada-high-business.jpg" alt=""></span></div>
+            <div class="image"><span><img src="images/18-FACHADA.jpg" alt=""></span></div>
+            <div class="image"><span><img src="images/fachada-high-business.jpg" alt=""></span></div>
+            <div class="image"><span><img src="images/18-FACHADA.jpg" alt=""></span></div>
+            <div class="image"><span><img src="images/fachada-high-business.jpg" alt=""></span></div>
+        </div>
+    </div>
+    <div class="preview-box">
+        <div class="details">
+            <span class="title">Imagem <p class="current-img"></p> de <p class="total-img"></p></span>
+            <span class="icon fas fa-times"></span>
+        </div>
+        <div class="image-box">
+            <div class="slide prev"><i class="fas fa-angle-left"></i></div>
+            <div class="slide next"><i class="fas fa-angle-right"></i></div>
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="shadow"></div>
+
+
+    <nav class="nav">
+      <a href="apresentacao.html" class="nav-link link-active">
+        <img src="icons/Icone Apresentacao.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Apresentação</span>
+      </a>
+      <a href="localizacao.html" class="nav-link">
+        <img src="icons/Icone Localizacao.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Localização</span>
+      </a>
+      <a href="implantacao.html" class="nav-link">
+        <img src="icons/Icone Area de Implantacao.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Implantação</span>
+      </a>
+      <a href="plantas.html" class="nav-link">
+        <img src="icons/Icone Plantas.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Plantas</span>
+      </a>
+      <a href="tuor.html" class="nav-link">
+        <img src="icons/Icone 360.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Tuor</span>
+      </a>
+      <a href="andares.html" class="nav-link">
+        <img src="icons/Icone Andares.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Andares</span>
+      </a>
+      <a href="diferenciais.html" class="nav-link">
+        <img src="icons/Icone Diferencial.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Diferenciais</span>
+      </a>
+      <a href="evolucao.html" class="nav-link">
+        <img src="icons/Icone Evolucao da Obra.png" alt="Home" class="nav-icon">
+        <span class="nav-text">Evolução</span>
+      </a>
+      <a href="index.html" class="nav-link" >
+        <img src="icons/back.png" alt="Home" class="nav-icon"style="width: 35px!important;">
+        <span class="nav-text">Voltar</span>
+      </a>
+    </nav>
+</body>
+</html>
+-->
+
+
+
+<!-- 
+
+<style>
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
+  align-content: center;
+  grid-column: auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+}
+.grid img{
+  width: 200px;
+  height: 200px;
+}
+#lightbox{
+    position:fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+}
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    padding: 4px;
+    background-color: black;
+    border: 2px solid white;
+}
+
+.lightbox-container{
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+}
+.lightbox-container.active {
+    opacity: 1;
+    pointer-events: all;
+}
+</style>
+</head>
+<body class="">
+  <div class="container">
+    <div class="content" style="margin-top: 2%;">
+        <div class="grid"> 
+            <img src="images/18-FACHADA.jpg" alt="" class="lightbox-enabled">
+            <img src="images/18-FACHADA.jpg" alt="" class="lightbox-enabled">
+            <img src="images/18-FACHADA.jpg" alt="" class="lightbox-enabled">
+            <img src="images/18-FACHADA.jpg" alt="" class="lightbox-enabled">
+            <img src="images/18-FACHADA.jpg" alt="" class="lightbox-enabled">
+            <img src="images/18-FACHADA.jpg" alt="" class="lightbox-enabled">
+            <img src="images/18-FACHADA.jpg" alt="" class="lightbox-enabled">
+            <img src="images/18-FACHADA.jpg" alt="" class="lightbox-enabled">
+        </div>
+        <div class="lightbox-container">
+            <button class="lightbox-btn left" id="left">
+                <img src="icons/left-arrow.png" class="lightbox-img">
+            </button>
+            <button class="lightbox-btn right" id="right">
+                <img src="icons/right-arrow.png" class="lightbox-img">
+            </button>
+        </div>
+    </div>
+  </div>
+
+    <script>
+        const lightbox = document.createElement('div')
+lightbox.id = 'lightbox'
+document.body.appendChild(lightbox)
+
+const images = document.querySelectorAll('img')
+images.forEach(image => {
+    image.addEventListener('click', e => {
+        lightbox.classList.add('active')
+        const img = document.createElement('img')
+        img.src = image.src
+        while (lightbox.firstChild) {
+            lightbox.removeChild(lightbox.firstChild)
+        }
+        lightbox.appendChild(img)
+    })
+})
+
+lightbox.addEventListener('click', e => {
+    if (e.target !== e.currentTarget) return
+    lightbox.classList.remove('active')
+})
+    </script>
+
+-->

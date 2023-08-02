@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Villa Guaimbe 1.0</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/style.css">
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+  }
+  body{
+    background: url(images/diferenciais/Background-diferenciais.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    width: 150px;
+    height: 900px;
+    margin-left: 20px;
+  }
+  .menu-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 900px;
+    margin-right: 20px;
+  }
+  .box{
+    background: url(images/18-FACHADA.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1300px;
+    height: 800px;
+    margin-bottom: 100px;
+    transition: 0.5s;
+    transform: scaleY(1);
+  }
+  .card{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 10px 8px #1a1a1a;
+    border-radius: 12px;
+    width: 100%;
+    padding: 5px;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .img1{
+    background:url(images/diferenciais/Customizacao2.jpg);
+    background-size: cover;
+  }
+  .img2{
+    background:url(images/diferenciais/Areas.jpg);
+    background-size: cover;
+  }
+  .img3{
+    background:url(images/diferenciais/Aspiracao.jpg);
+    background-size: cover;
+  }
+  .img4{
+    background:url(images/diferenciais/Automacao.jpg);
+    background-size: cover;
+  }
+  .img5{
+    background:url(images/diferenciais/Elevador.jpg);
+    background-size: cover;
+  }
+  .img6{
+    background:url(images/diferenciais/Hidraulica.jpg);
+    background-size: cover;
+  }
+  .img7{
+    background:url(images/diferenciais/BikeRepair2.jpg);
+    background-size: cover;
+  }
+  .img8{
+    background:url(images/diferenciais/AEREA_VG.jpg);
+    background-size: cover;
+  }
+  .img9{
+    background:url(images/diferenciais/GolfCar.jpg);
+    background-size: cover;
+  }
+  .img10{
+    background:url(images/diferenciais/Market.jpg);
+    background-size: cover;
+  }
+  .img11{
+    background:url(images/diferenciais/Car.jpg);
+    background-size: cover;
+  }
+  .img12{
+    background:url(images/diferenciais/painel.jpg);
+    background-size: cover;
+  }
+  .img13{
+    background:url(images/diferenciais/Ar.jpg);
+    background-size: cover;
+  }
+  .img14{
+    background:url(images/diferenciais/Condominio2.jpg);
+    background-size: cover;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="menu-left">
+      <div class="card" id="myDIV1" onclick="myFunction1()"><img src="images/diferenciais/ico_customiza.png" alt=""><p>Alto nível de customização</p></div>
+      <div class="card" id="myDIV2" onclick="myFunction2()"><img src="images/diferenciais/ico_areas.png" alt=""><p>Áreas comuns, de lazer e conveniência equipadas e decoradas </p></div>
+      <div class="card" id="myDIV3" onclick="myFunction3()"><img src="images/diferenciais/ico_ar.png" alt=""><p>Aspiração central </p></div>
+      <div class="card" id="myDIV4" onclick="myFunction4()"><img src="images/diferenciais/ico_automacao.png" alt=""><p>Infraestrutura para automação de som, esquadrias e luminação </p></div>
+      <div class="card" id="myDIV5" onclick="myFunction5()"><img src="images/diferenciais/ico_elevadores.png" alt=""><p>Elevadores regenerativos </p></div>
+      <div class="card" id="myDIV6" onclick="myFunction6()"><img src="images/diferenciais/ico_hidro.png" alt=""><p>Sistema hidráulico monocomando </p></div>
+      <div class="card" id="myDIV7" onclick="myFunction7()"><img src="images/diferenciais/ico_bike.png" alt=""><p>Bike sharing </p></div>
+    </div>
+    <div class="box" id="box">
+    </div>
+    <div class="menu-right">
+      <div class="card" id="myDIV8" onclick="myFunction8()"><img src="images/diferenciais/ico_localiza.png" alt=""><p>Localização privilegiada, no melhor da Vila do Golf </p></div>
+      <div class="card" id="myDIV9" onclick="myFunction9()"><img src="images/diferenciais/ico_golfe.png" alt=""><p>Vagas para estacionamento de golf cart's e motos elétricas</p></div>
+      <div class="card" id="myDIV10" onclick="myFunction10()"><img src="images/diferenciais/ico_market.png" alt=""><p>Mini market </p></div>
+      <div class="card" id="myDIV11" onclick="myFunction11()"><img src="images/diferenciais/ico_eletrico.png" alt=""><p>Ponto para abastecimento de carro elétrico (1 por apto)</p></div>
+      <div class="card" id="myDIV12" onclick="myFunction12()"><img src="images/diferenciais/ico_placas.png" alt=""><p>Instalação de placas fotovoltaicas para diminuição do consumo de energia </p></div>
+      <div class="card" id="myDIV13" onclick="myFunction13()"><img src="images/diferenciais/ico_ar.png" alt=""><p>Infraestrutura p/ ar condicionado (6 pontos previstos)</p></div>
+      <div class="card" id="myDIV14" onclick="myFunction14()"><img src="images/diferenciais/ico_app.png" alt=""><p>Aplicativo para gestão do condomínio</p></div>
+    </div>
+  </div>
+
+
+  <nav class="nav">
+    <a href="apresentacao.html" class="nav-link">
+      <img src="icons/Icone Apresentacao.png" alt="Home" class="nav-icon">
+      <span class="nav-text">Apresentação</span>
+    </a>
+    <a href="localizacao.html" class="nav-link">
+      <img src="icons/Icone Localizacao.png" alt="Home" class="nav-icon">
+      <span class="nav-text">Localização</span>
+    </a>
+    <a href="implantacao.html" class="nav-link">
+      <img src="icons/Icone Area de Implantacao.png" alt="Home" class="nav-icon">
+      <span class="nav-text">Implantação</span>
+    </a>
+    <a href="plantas.html" class="nav-link">
+      <img src="icons/Icone Plantas.png" alt="Home" class="nav-icon">
+      <span class="nav-text">Plantas</span>
+    </a>
+    <a href="tuor.html" class="nav-link">
+      <img src="icons/Icone 360.png" alt="Home" class="nav-icon">
+      <span class="nav-text">Tuor</span>
+    </a>
+    <a href="andares.html" class="nav-link">
+      <img src="icons/Icone Andares.png" alt="Home" class="nav-icon">
+      <span class="nav-text">Vistas</span>
+    </a>
+    <a href="diferenciais.html" class="nav-link link-active">
+      <img src="icons/Icone Diferencial.png" alt="Home" class="nav-icon">
+      <span class="nav-text">Diferenciais</span>
+    </a>
+    <a href="evolucao.html" class="nav-link">
+      <img src="icons/Icone Evolucao da Obra.png" alt="Home" class="nav-icon">
+      <span class="nav-text">Evolução</span>
+    </a>
+    <a href="index.html" class="nav-link" >
+      <img src="icons/back.png" alt="Home" class="nav-icon"style="width: 35px!important;">
+      <span class="nav-text">Voltar</span>
+    </a>
+  </nav>
+  <script>
+    function myFunction1() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img1");}
+    function myFunction2() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img2");}
+    function myFunction3() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img3");}
+    function myFunction4() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img4");}
+    function myFunction5() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img5");}
+    function myFunction6() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img6");}
+    function myFunction7() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img7");}
+    function myFunction8() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img8");}
+    function myFunction9() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img9");}
+    function myFunction10() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img10");}
+    function myFunction11() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img11");}
+    function myFunction12() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img12");}
+    function myFunction13() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img13");}
+    function myFunction14() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14');element.classList.add("img14");}
+  </script>
+</body>
+</html>
