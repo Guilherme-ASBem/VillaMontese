@@ -13,115 +13,116 @@ body{
   width: 100%;
 }
 .content{
-    align-content: center;
-    overflow: hidden; /*Esconde todo o conteudo que ultrapassa o content*/
-    position: absolute; /* Centraliza o content */
+  align-items: center;
+  align-content: center;
+  overflow: hidden; /*Esconde todo o conteudo que ultrapassa o content*/
+  position: absolute; /* Centraliza o content */
 }
 /* --- CARDS DO INSTITUCIONAL --- */
 .center {
-    transform: scale(1.5);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  transform: scale(1.5);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   
-  .article-card {
-    width: 300px;
-    height: 200px;
-    margin-top: 1%;
-    margin-left: 1%;
-    margin-bottom: 1%;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 600;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 300ms;
-  }
+.article-card {
+  width: 300px;
+  height: 200px;
+  margin-top: 100%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
+}
   
-  .article-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  }
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.article-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-card .content {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 30px 20px 20px 10px;
+  height: max-content;
+  width: 100%;
+  right: 0%;
+  bottom: 0%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
   
-  .article-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .article-card .content {
-    box-sizing: border-box;
-    position: absolute;
-    padding: 30px 20px 20px 10px;
-    height: max-content;
-    width: 100%;
-    right: 0%;
-    bottom: 0%;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
-  }
-  
-  .article-card .date,
-  .article-card .title {
-    margin: 0;
-  }
-  
-  .article-card .date {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 4px;
-  }
-  
-  .article-card .title {
-    font-size: 17px;
-    color: #fff;
-  }
+.article-card .date,
+.article-card .title {
+  margin: 0;
+}
+
+.article-card .date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
+}
+
+.article-card .title {
+  font-size: 17px;
+  color: #fff;
+}
 
 
-  /* MENU DE SLIDES */
-  .circulo{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    overflow:hidden;
-    float:left;
-    margin:15px;
-    transition:0.3s ease;
-    cursor:pointer;
+/* MENU DE SLIDES */
+.circulo{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  overflow:hidden;
+  float:left;
+  margin:15px;
+  transition:0.3s ease;
+  cursor:pointer;
 }
 .bar{
-    width:90px;
-    height:90px;
-    color: #fff;
-    margin: 25px;
-    overflow:hidden;
-    float:left;
-    border-radius: 50%;
-    cursor: pointer; /* Muda o cursor para mão de clique */
-    text-align: center;
-    transition: 0.4s;
-    background: linear-gradient(
-      360deg,
-      rgba(15, 37, 110) 50%,
-      rgba(16, 40, 120) 50%
-    );
-    background-blend-mode: normal;
-    box-shadow: 0px 0px 3px 0px rgb(7, 7, 7);
+  width:90px;
+  height:90px;
+  color: #fff;
+  margin: 25px;
+  overflow:hidden;
+  float:left;
+  border-radius: 50%;
+  cursor: pointer; /* Muda o cursor para mão de clique */
+  text-align: center;
+  transition: 0.4s;
+  background: linear-gradient(
+    360deg,
+    rgba(15, 37, 110) 50%,
+    rgba(16, 40, 120) 50%
+  );
+  background-blend-mode: normal;
+  box-shadow: 0px 0px 3px 0px rgb(7, 7, 7);
 }
 .slides{
-    display: flex;
-    width: 500%;
-    height: 100%;
+  display: flex;
+  width: 500%;
+  height: 100%;
 }
 .slide {
-    width: 20%;
-    transition: .4s;
+  width: 20%;
+  transition: .4s;
 }
 .slide img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 #slide1:checked ~ .s1{
   margin-left: 0%;
