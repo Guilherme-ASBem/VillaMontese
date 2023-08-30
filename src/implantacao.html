@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Villa Guaimbe 1.0</title>
+<title>Villa Montese</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles/style.css">
 <style>
-  *{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-    outline: none;
-  }
   body{
-    display: flex;
-    align-items: center;
     justify-content: left!important;
-    font-size:small;
-    background: url(images/fundoescuro.JPG);
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+  *::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
   }
   #imagem{
     display: flex;
@@ -31,19 +24,8 @@
     background-repeat: no-repeat;
     margin-bottom: 1%;
   }
-  .button{
-    position: relative;
-    width: 180px;
-    height: 40px;
-    border-radius: 25px;
-    background: #fff!important;
-    text-align: center;
-    margin-bottom: 20px;
-    cursor: pointer;
-    box-shadow: 5px 10px 8px #1a1a1adc;
-  }
   .box{
-    background: url(images/Bolotario3.png);
+    background: url(Imagens/cozinha.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 1920px;
@@ -53,19 +35,25 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 200px;
+    width: 250px;
     height: 900px;
     margin-bottom: 100px;
     left: 20px;
   }
   .menu-right{
-    display: flex;
+    overflow: auto;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
-    width: 200px;
-    height: 900px;
-    margin-bottom: 100px;
-    right: 0px;
+    width: 300px;
+    height: 630px;
+    margin-top: 90px;
+    right: 30px;
+    border-radius: 5px;
+    background-color: rgba(39, 39, 39, 0.3);
+    -webkit-tap-highlight-color:transparent;
+    transition: background-color 0.1s ease-in-out;
+    opacity : 1;
   }
   .ball{
     position: absolute;
@@ -74,57 +62,67 @@
     width: 40px;
     height: 100%;
     border-radius: 50%;
-    border: 0px solid forestgreen;
-    background-color:forestgreen;
   }
   .p-button{
     padding: 10px 0 0 30px;
     font-size: 13px;
     font-weight: 600;
   }
+  .p-button2{
+    width: 100px;
+    height: 30px;
+    padding: 0px 0 0 0;
+    position: relative;
+    font-size: 13px;
+    color:white;
+    font-weight: 500;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+  }
   .p-ball{
     margin-top: 25%;
     font-size: 15px;
     font-weight: 600;
-    color: #fff;
+    color:black;
   }
   .img1{
-    background:url(images/Delivery2.jpg);
+    background:url(Imagens/cozinha.png);
     background-size: cover;
-    transition: 1s;
+    transition: 0.3s;
   }
   .img2{
-    background:url(images/Coworking.jpg);
+    background:url(Imagens/Sala.png);
     background-size: cover;
-    transition: 1s;
+    transition: 0.3s;
   }
   .img3{
-    background:url(images/Familia2.jpg);
+    background:url(Imagens/cadeira.png);
     background-size: cover;
-    transition: 1s;
+    transition: 0.3s;
   }
   .img4{
-    background:url(images/Quadra2.png);
+    background:url(Imagens/jantar.png);
     background-size: cover;
-    transition: 1s;
+    transition: 0.3s;
   }
   .img5{
-    background:url(images/Sauna2.jpg);
+    background:url(Imagens/fachada01.png);
     background-size: cover;
-    transition: 1s;
+    transition: 0.3s;
   }
   .img6{
-    background:url(images/Market2.jpg);
+    background:url(Imagens/fachada02.png);
     background-size: cover;
-    transition: 1s;
+    transition: 0.3s;
   }
   .img7{
-    background:url(images/Salao2.jpg);
+    background:url(Imagens/Beach01.png);
     background-size: cover;
-    transition: 1s;
+    transition: 0.3s;
   }
   .img8{
-    background:url(images/Pet.jpg);
+    background:url(Imagens/Implantação\ Montese.png);
     background-size: cover;
     transition: 1s;
   }
@@ -163,120 +161,139 @@
     background-size: cover;
     transition: 1s;
   }
+  .icone{
+    position: relative;
+    top: 5px;
+    margin-left: 5px;
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    background-size: cover;
+    overflow: auto;
+    background-color: aliceblue;
+  }
+  .icone1{
+    background: url(Imagens/Diferenciais/Cozinha.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .icone2{
+    background: url(Imagens/Diferenciais/Sala.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .icone3{
+    background: url(Imagens/Diferenciais/Sala2.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .icone4{
+    background: url(Imagens/Diferenciais/Churrasco.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .icone5{
+    background: url(Imagens/Diferenciais/Quarto.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .icone6{
+    background: url(Imagens/Diferenciais/Guarita.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .icone7{
+    background: url(Imagens/Diferenciais/Beach.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .card{
+    display: flex;
+    position: relative;
+    width: 270px;
+    height: 90px;
+    border-radius: 3px;
+    background-color: rgb(17, 36, 56)!important;
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    margin-left: 13px;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px #1a1a1adc;
+  }
 </style>
 </head>
 
 <body class="container">
   <div class="content box" id="box"></div>
-  
-    <div class="content menu-left">
-      <div class="button img1" onclick="myFunction1()">
-        <div class="ball"><p class="p-ball">1</p></div>
-        <p class="p-button">Delivery/Refrigerado</p>
+
+    <div class="content menu-right">
+      <div class="card" onclick="myFunction1()">
+        <div class="icone icone1"></div>
+        <div class="p-button2"><span>Cozinha</span></div>
       </div>
-      <div class="button img2" onclick="myFunction2()">
-        <div class="ball"><p class="p-ball">2</p></div>
-        <p class="p-button">Coworking</p>
+      <div class="card" onclick="myFunction2()">
+        <div class="icone icone2"></div>
+        <div class="p-button2"><span>Foto 2</span></div>
       </div>
-      <div class="button img3" onclick="myFunction3()">
-        <div class="ball"><p class="p-ball">3</p></div>
-        <p class="p-button">Espaço Família I</p>
+      <div class="card" onclick="myFunction3()">
+        <div class="icone icone3"></div>
+        <div class="p-button2"><span>Foto 3</span></div>
       </div>
-      <div class="button img4" onclick="myFunction4()">
-        <div class="ball"><p class="p-ball">4</p></div>
-        <p class="p-button">Quadra Esportiva</p>
+      <div class="card" onclick="myFunction4()">
+        <div class="icone icone4"></div>
+        <div class="p-button2"><span>Foto 4</span></div>
       </div>
-      <div class="button img5" onclick="myFunction5()">
-        <div class="ball"><p class="p-ball">5</p></div>
-        <p class="p-button">Sauna</p>
+      <div class="card" onclick="myFunction5()">
+        <div class="icone icone5"></div>
+        <div class="p-button2"><span>Foto 5</span></div>
       </div>
-      <div class="button img6" onclick="myFunction6()">
-        <div class="ball"><p class="p-ball">6</p></div>
-        <p class="p-button">Mini Market</p>
+      <div class="card" onclick="myFunction6()">
+        <div class="icone icone6"></div>
+        <div class="p-button2"><span>Foto 6</span></div>
       </div>
-      <div class="button img7" onclick="myFunction7()">
-        <div class="ball"><p class="p-ball">7</p></div>
-        <p class="p-button">Salão de Festas</p>
+      <div class="card" onclick="myFunction7()">
+        <div class="icone icone7"></div>
+        <div class="p-button2"><span>Foto 7</span></div>
       </div>
-    </div>
-  </div>
-  <div class="content menu-right">
-    <div class="button img8" onclick="myFunction8()">
-      <div class="ball"><p class="p-ball">8</p></div>
-      <p class="p-button">Espaço Pet</p>
-    </div>
-    <div class="button img9" onclick="myFunction9()">
-      <div class="ball"><p class="p-ball">9</p></div>
-      <p class="p-button">Brinquedoteca</p>
-    </div>
-    <div class="button img10" onclick="myFunction10()">
-      <div class="ball"><p class="p-ball">10</p></div>
-      <p class="p-button">Playground I</p>
-    </div>
-    <div class="button img11" onclick="myFunction11()">
-      <div class="ball"><p class="p-ball">11</p></div>
-      <p class="p-button">Academia</p>
-    </div>
-    <div class="button img12" onclick="myFunction12()">
-      <div class="ball"><p class="p-ball">12</p></div>
-      <p class="p-button">Vagas Visitantes</p>
-    </div>
-    <div class="button img13" onclick="myFunction13()">
-      <div class="ball"><p class="p-ball">13</p></div>
-      <p class="p-button">Praça das Orquídeas</p>
-    </div>
-    <div class="button img14" onclick="myFunction14()">
-      <div class="ball"><p class="p-ball">14</p></div>
-      <p class="p-button">Solarium / Piscinas</p>
-    </div>
-    <div class="button img15" onclick="myFunction15()">
-      <div class="ball"><p class="p-ball">15</p></div>
-      <p class="p-button">Térreo</p>
+      <div class="card" onclick="myFunction8()">
+        <div class="icone icone7"></div>
+        <div class="p-button2"><span>Foto 8</span></div>
+      </div>
     </div>
   </div>
 </div>
 
-
-
 <nav class="nav">
   <a href="apresentacao.html" class="nav-link">
-    <img src="icons/Icone Apresentacao.png" alt="Home" class="nav-icon">
+    <img src="icons/icons/Icone_01.png" alt="Home" class="nav-icon">
     <span class="nav-text">Apresentação</span>
   </a>
   <a href="localizacao.html" class="nav-link">
-    <img src="icons/Icone Localizacao.png" alt="Home" class="nav-icon">
+    <img src="icons/icons/Icone_02.png" alt="Home" class="nav-icon">
     <span class="nav-text">Localização</span>
   </a>
   <a href="implantacao.html" class="nav-link link-active">
-    <img src="icons/Icone Area de Implantacao.png" alt="Home" class="nav-icon">
+    <img src="icons/icons/Icone_03.png" alt="Home" class="nav-icon">
     <span class="nav-text">Implantação</span>
   </a>
-  <a href="plantas.html" class="nav-link">
-    <img src="icons/Icone Plantas.png" alt="Home" class="nav-icon">
-    <span class="nav-text">Plantas</span>
+  <a href="projeto.html" class="nav-link">
+    <img src="icons/icons/Icone_04.png" alt="Home" class="nav-icon">
+    <span class="nav-text">Projeto</span>
   </a>
-  <a href="tuor.html" class="nav-link">
-    <img src="icons/Icone 360.png" alt="Home" class="nav-icon">
-    <span class="nav-text">Tuor</span>
-  </a>
-  <a href="andares.html" class="nav-link">
-    <img src="icons/Icone Andares.png" alt="Home" class="nav-icon">
-    <span class="nav-text">Vistas</span>
+  <a href="tour.html" class="nav-link">
+    <img src="icons/icons/Icone_05.png" alt="Home" class="nav-icon">
+    <span class="nav-text">Tour</span>
   </a>
   <a href="diferenciais.html" class="nav-link">
-    <img src="icons/Icone Diferencial.png" alt="Home" class="nav-icon">
+    <img src="icons/icons/Icone_07.png" alt="Home" class="nav-icon">
     <span class="nav-text">Diferenciais</span>
-  </a>
-  <a href="evolucao.html" class="nav-link">
-    <img src="icons/Icone Evolucao da Obra.png" alt="Home" class="nav-icon">
-    <span class="nav-text">Evolução</span>
   </a>
   <a href="index.html" class="nav-link" >
     <img src="icons/back.png" alt="Home" class="nav-icon"style="width: 35px!important;">
     <span class="nav-text">Voltar</span>
   </a>
 </nav>
-
 
   <script>
     function myFunction1() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14', 'img15');element.classList.add("img1");}
@@ -294,57 +311,6 @@
     function myFunction13() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14', 'img15');element.classList.add("img13");}
     function myFunction14() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14', 'img15');element.classList.add("img14");}
     function myFunction15() {var element = document.getElementById("box");element.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12', 'img13', 'img14', 'img15');element.classList.add("img15");}
-
-    /*
-      document.querySelector('.img1').addEventListener('click',(e)=>{
-        document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
-      document.body.classList.toggle('img1');
-    })
-      document.querySelector('.img2').addEventListener('click',(e)=>{
-        document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
-      document.body.classList.toggle('img2');
-    })
-      document.querySelector('.img3').addEventListener('click',(e)=>{
-        document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
-      document.body.classList.toggle('img3');
-    })
-      document.querySelector('.img4').addEventListener('click',(e)=>{
-        document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
-      document.body.classList.toggle('img4');
-    })
-      document.querySelector('.img5').addEventListener('click',(e)=>{
-        document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
-      document.body.classList.toggle('img5');
-    })
-      document.querySelector('.img6').addEventListener('click',(e)=>{
-        document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
-      document.body.classList.toggle('img6');
-    })
-      document.querySelector('.img7').addEventListener('click',(e)=>{
-        document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
-      document.body.classList.toggle('img7');
-    })
-      document.querySelector('.img8').addEventListener('click',(e)=>{
-        document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
-      document.body.classList.toggle('img8');
-    })
-      document.querySelector('.img9').addEventListener('click',(e)=>{
-        document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
-      document.body.classList.toggle('img9');
-    })
-      document.querySelector('.img10').addEventListener('click',(e)=>{
-        document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
-      document.body.classList.toggle('img10');
-    })
-      document.querySelector('.img11').addEventListener('click',(e)=>{
-        document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
-      document.body.classList.toggle('img11');
-    })
-      document.querySelector('.img12').addEventListener('click',(e)=>{
-        document.body.classList.remove('img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10', 'img11', 'img12');
-      document.body.classList.toggle('body');
-    })
-    */
   </script>
 </body>
 </html>

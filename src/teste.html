@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Villa Guaimbe 1.0 - TSGui-VillaGuaimbe</title>
+<title>Villa Montese</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles/style.css">
@@ -14,119 +14,24 @@
   outline: none;
 }
 .content{
+  display: flex;
   align-content: center;
   overflow: hidden; /*Esconde todo o conteudo que ultrapassa o content*/
   position: absolute; /* Centraliza o content */
-}
-.box{
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 900px;
-  height: 150px;
-  left: 25%;
-  top: 30px
-}
-
-img {
-  width: 1920px;
-  height: 1080px;
-  border-radius: 5px;
-}
-
-.imagechange {
-  width: 700px;
-  height: 100px;
-}
-
-.slidecontainer {
-  background-color: rgba(42, 40, 46, 0.3);
-  border-radius: 45px;
-  opacity : 1;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  margin-top: 40px;
-  width: 900px;
-  height: 100px;
-  justify-content: center;
-}
-
-.slider-range {
-  margin-top: 15px;
-  margin-left: 45px;
-  width: 800px;
-}
-
-.range-number {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-}
-li {
-  margin: 13px;
-  font-weight: 400;
-  color: white;
+  width: 80%;
+  height: 100%;
 }
 
 </style>
 </head>
 <body>
   <div class="container">
-    <img src="plantas/Video.0000.png" id="imgchange">
-    <div class="content box">
-      <div class="slidecontainer">
-        <input type="range" min="1" max="100" value="1" class="slider-range" id="myRange">
-          <ul class="range-number">
-            <li>4h</li>
-            <li>5h</li>
-            <li>6h</li>
-            <li>7h</li>
-            <li>8h</li>
-            <li>9h</li>
-            <li>10h</li>
-            <li>11h</li>
-            <li>12h</li>
-            <li>13h</li>
-            <li>14h</li>
-            <li>15h</li>
-            <li>16h</li>
-            <li>17h</li>
-            <li>18h</li>
-            <li>20h</li>
-          </ul>
-        <p> <br>
-          <span id="rangevalue"></span></p>
-      </div>
+    <div class="content" style="background-color: aliceblue;">
+      <div style="width:30px;height:30px; background-color: antiquewhite;"></div>
+      
+      <div style="width:30px;height:30px; background-color:aqua;"></div>
     </div>
   </div>
-
-  <!--
-  <div class="container">
-    <div class="content box">
-      <img src="plantas/Video.0000.png" id="imgchange">
-      <div class="imagechange">
-        <div class="slidecontainer">
-          <input type="range" min="1" max="100" value="1" class="slider-range" id="myRange">
-        <ul class="range-number">
-          <li>0</li>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-        </ul>
-        <p>Value : <span id="rangevalue"></span></p>
-      </div>
-    </div>
-  </div>
-
-  -->
-
-
-
-
-
   <nav class="nav">
     <a href="apresentacao.html" class="nav-link">
       <img src="icons/Icone Apresentacao.png" alt="Home" class="nav-icon">
@@ -167,110 +72,6 @@ li {
   </nav>
 
   <script>
-    let rangevalue = document.getElementById("myRange");
-    let setvalue = document.getElementById("rangevalue");
-    let imgchangevalue = document.getElementById("imgchange")
-        //setvalue.innerHTML = rangevalue.value;
-        //console.log(rangevalue.value)
-
-    //Now will use oninput event.
-    
-  rangevalue.oninput = function() {
-    let getvalue = rangevalue.value;
-    setvalue.innerHTML = this.value;
-           if (getvalue > 0 && getvalue < 3) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0000.png")
-    } else if (getvalue >= 4 && getvalue <= 6) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0001.png")
-    } else if (getvalue >= 7 && getvalue <= 9) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0002.png")
-    } else if (getvalue >= 10 && getvalue <= 13) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0003.png")
-    } else if (getvalue >= 14 && getvalue <= 16) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0004.png")
-    } else if (getvalue >= 17 && getvalue <= 19) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0005.png")
-    } else if (getvalue >= 20 && getvalue <= 23) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0006.png")
-    } else if (getvalue >= 24 && getvalue <= 26) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0007.png")
-    } else if (getvalue >= 27 && getvalue <= 29) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0008.png")
-    } else if (getvalue >= 30 && getvalue <= 33) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0009.png")
-    } else if (getvalue >= 34 && getvalue <= 36) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0010.png")
-    } else if (getvalue >= 37 && getvalue <= 39) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0011.png")
-    } else if (getvalue >= 40 && getvalue <= 43) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0012.png")
-    } else if (getvalue >= 44 && getvalue <= 46) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0013.png")
-    } else if (getvalue >= 47 && getvalue <= 49) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0014.png")
-    } else if (getvalue >= 50 && getvalue <= 53) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0015.png")
-    } else if (getvalue >= 54 && getvalue <= 56) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0015.png")
-    } else if (getvalue >= 57 && getvalue <= 59) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0016.png")
-    } else if (getvalue >= 60 && getvalue <= 63) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0017.png")
-    } else if (getvalue >= 64 && getvalue <= 66) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0018.png")
-    } else if (getvalue >= 67 && getvalue <= 69) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0019.png")
-    } else if (getvalue >= 70 && getvalue <= 73) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0020.png")
-    } else if (getvalue >= 74 && getvalue <= 76) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0021.png")
-    } else if (getvalue >= 77 && getvalue <= 79) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0022.png")
-    } else if (getvalue >= 80 && getvalue <= 83) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0023.png")
-    } else if (getvalue >= 84 && getvalue <= 86) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0024.png")
-    } else if (getvalue >= 87 && getvalue <= 89) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0025.png")
-    } else if (getvalue >= 94 && getvalue <= 93) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0026.png")
-    } else if (getvalue >= 94 && getvalue <= 96) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0027.png")
-    } else if (getvalue >= 97 && getvalue <= 99) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0028.png")
-    } else if (getvalue >= 100) {
-        imgchangevalue.setAttribute("src", "plantas/Video.0029.png")
-    }
-  }
-    /*
-    let rangevalue = document.getElementById("myRange");
-    let setvalue = document.getElementById("rangevalue");
-    let imgchangevalue = document.getElementById("imgchange")
-        //setvalue.innerHTML = rangevalue.value;
-        //console.log(rangevalue.value)
-
-    //Now will use oninput event.
-    
-    rangevalue.oninput = function() {
-        let getvalue = rangevalue.value;
-        setvalue.innerHTML = this.value;
-        if (getvalue > 0 && getvalue < 16) {
-            imgchangevalue.setAttribute("src", "plantas/Planta01.png")
-        } else if (getvalue >= 17 && getvalue <= 33) {
-            imgchangevalue.setAttribute("src", "plantas/Planta02.png")
-        } else if (getvalue >= 34 && getvalue <= 49) {
-            imgchangevalue.setAttribute("src", "plantas/Planta03.png")
-        } else if (getvalue >= 50 && getvalue <= 66) {
-            imgchangevalue.setAttribute("src", "plantas/Planta04.png")
-        } else if (getvalue >= 67 && getvalue <= 83) {
-            imgchangevalue.setAttribute("src", "plantas/Planta05.png")
-        } else if (getvalue >= 84 && getvalue <= 99) {
-            imgchangevalue.setAttribute("src", "plantas/Planta06.png")
-        } else if (getvalue >= 100) {
-            imgchangevalue.setAttribute("src", "plantas/Planta01.png")
-        }
-    }
-    */
   </script>
 </body>
 </html>
